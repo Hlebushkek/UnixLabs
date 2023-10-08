@@ -10,7 +10,7 @@ fn main() -> Result<()> {
     color_eyre::install()?;
 
     let args: Vec<String> = env::args().collect();
-    if args.len() != 4 {
+    if args.len() < 2 {
         eprintln!("Usage: {} <path> -L -S", args[0]);
         std::process::exit(1);
     }
